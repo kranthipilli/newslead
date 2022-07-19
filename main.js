@@ -7,10 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const db = require("./db");
 const router = require("./routes");
 
-if(!config.get('jwtPrivateKey')){
-  console.log('fetal error :jwtPrivateKey not defined')
-   process.exit(1)
- }
+
 
 
 db.connect()
