@@ -2,14 +2,26 @@
 <html lang="en">
     <%- include("header") %> 
 <body>
-        <h1>add post </h1>
+  <div class="container">
+        <h1 style="margin:50px 25px;">add post </h1>
       
-
+    
         <form method="post"  action="/post" >
-             <input type="text" name="title">
-             <input type="text" name="body">
-             <input type="text" name="author">
-                <select  name="catagory">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Title</span>
+             <input type="text" class="form-control" placeholder="Title" aria-label="Username" aria-describedby="basic-addon1"  name="title">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Body</span>
+              <input type="text" class="form-control" placeholder="Article context" aria-label="Username" aria-describedby="basic-addon1" name="body">
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Author</span>
+              <input type="text" class="form-control" placeholder="Author" aria-label="Username" aria-describedby="basic-addon1" name="author">
+            </div>
+             
+            <div class="input-group mb-3">
+                <select  name="catagory" class="form-control">
                   <option selected>select catagory</option>
                   <option name="Business">Business</option>
                   <option name="Cars">Cars</option>
@@ -25,8 +37,10 @@
                   <option name="Video">Video</option>
                   <option name="World">World</option>
                  </select>
-                 <button type="submit">sub</button>   
+                </div>
+                 <button type="submit"class="btn btn-primary">submit</button>   
               </form>
+            </div>
               
            
     
