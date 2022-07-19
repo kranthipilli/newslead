@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("header") %>
+  <body>
+    <div class="navigation"><%- include("nav") %></div>
+    <div class="container">
+      <% data.forEach((Post)=>{ %>
+      <div class="card" style="margin: 10px; width: 50%">
+        <div class="card-body">
+          <h5 class="card-title"><%= Post.title %></h5>
+          <p class="card-text"><%= Post.body %></p>
+          <p class="fw-lighter"><%= Post.catagory %></p>
+          <p class="fw-lighter"><%= Post.PostedOn %></p>
+          <a href="/del/<%= Post.id %> " class="card-link link-danger"
+            >Delete</a>
+        
+          <a href="/up/<%= Post.id %> " class="card-link link-green"
+            >Update</a>
+        </div>
+      </div>
+      <% }) %>
+
+      
+    </div>
+  </body>
+</html>

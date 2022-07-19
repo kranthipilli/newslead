@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("header") %> 
+<body>
+        <h1>add post </h1>
+      
+
+        <form method="post"  action="/post" >
+             <input type="text" name="title">
+             <input type="text" name="body">
+             <input type="text" name="author">
+                <select  name="catagory">
+                  <option selected>select catagory</option>
+                  <option name="Business">Business</option>
+                  <option name="Cars">Cars</option>
+                  <option name="Entertainment">Entertainment</option>
+                  <option name="Family">Family</option>
+                  <option name="Health">Health</option>
+                  <option name="Politics">Politics</option>
+                  <option name="Religion">Religion</option>
+                  <option name="Science">Science</option>
+                  <option name="Sports">Sports</option>
+                  <option name="Technology">Technology</option>
+                  <option name="Travel">Travel</option>
+                  <option name="Video">Video</option>
+                  <option name="World">World</option>
+                 </select>
+                 <button type="submit">sub</button>   
+              </form>
+              
+           
+    
+</body>
+</html>
