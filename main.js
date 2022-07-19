@@ -7,9 +7,10 @@ const { v4: uuidv4 } = require('uuid');
 const db = require("./db");
 const router = require("./routes");
 
-
-
-
+if(!config.get('jwtPrivateKey')){
+  console.log('fetal error :jwtPrivateKey not defined')
+   process.exit(1)
+ }
 db.connect()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -19,9 +20,6 @@ app.use("/posts",router)
 app.use("/up",router)
 app.use('/user',router)
 app.use("/auth",router)
-
-
-
 
 
 app.listen(port, () => {
