@@ -44,15 +44,17 @@ exports.updatePage = async (req, res) => {
 exports.updatePage = async (req, res) => {
   const id = req.params["id"];
   const result = await Post.find({ id });
-  console.log(result);
+  
   res.render("update-post", { data: result });
 };
 exports.updatePost = async (req, res) => {
 try {
-  const id = req.params["id"];
+  const id = req.body.id
+  
   const update = req.body;
-  const result = Post.findOneAndReplace({id},update)
-  console.log(result);
+  console.log(update)
+  const result = await Post.findOneAndReplace({id},update)
+  
   res.redirect("/");
 } catch (error) {
   console.log(error)

@@ -12,7 +12,7 @@ router.post("/post",postController.PostNews);
 router.get("/", postController.viewPost);
 router.get("/addpost", postController.createPost);
 router.get("/del/:id", postController.deletePost);
-router.post("/updates",postController.updatePost);
+router.post("/up/:id",postController.updatePost);
 router.get("/up/:id", postController.updatePage);
 router.post("/home/user", postController.userPage);
 router.post("/user/auth",authController.userPage)
