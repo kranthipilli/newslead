@@ -1,3 +1,3 @@
 const mongoose = require("mongoose");
-const UserSchema = require("../blog-web_app/userSehema")
+const UserSchema = require("./userSehema")
 module.exports=mongoose.model('userDb',UserSchema);

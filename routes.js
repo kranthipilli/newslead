@@ -1,5 +1,5 @@
 const authMid= require('./middleware/auth-mid')
-const admin =require('../blog-web_app/middleware/admin')
+const admin =require('./middleware/admin')
 const express = require("express");
 const router = express.Router();
 const postController = require("./CONTROLLERS/ctrls");
