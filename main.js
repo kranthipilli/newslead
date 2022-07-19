@@ -9,7 +9,7 @@ const router = require("./routes");
 
 if(!config.get('jwtPrivateKey')){
   console.log('fetal error :jwtPrivateKey not defined')
-   process.exit(1)
+  
  }
 db.connect()
 app.use(bodyParser.urlencoded({ extended: true }));
