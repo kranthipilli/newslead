@@ -24,7 +24,7 @@ exports.viewPost =  async (req, res) => {
 exports.PostNews = async (req, res) => {
   const newbook = new Post({ ...req.body, id: uuidv4() });
   const data = await newbook.save();
-  res.redirect("/home");
+  res.redirect("/");
   console.log(newbook);
 };
 
@@ -35,7 +35,7 @@ exports.createPost = async (req, res) => {
 exports.deletePost = async (req, res) => {
   const id = req.params["id"];
   const response = await Post.deleteOne({ id });
-  res.redirect("/home");
+  res.redirect("/");
 };
 exports.updatePage = async (req, res) => {
   res.render("update-post");
@@ -53,7 +53,7 @@ try {
   const update = req.body;
   const result = Post.findOneAndReplace({id},update)
   console.log(result);
-  res.redirect("/home");
+  res.redirect("/");
 } catch (error) {
   console.log(error)
 }

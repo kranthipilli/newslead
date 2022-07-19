@@ -9,7 +9,7 @@ const session = require("express-session");
 
 router.get('/user/me',authMid,postController.currentUser)
 router.post("/post",postController.PostNews);
-router.get("/home", postController.viewPost);
+router.get("/", postController.viewPost);
 router.get("/addpost", postController.createPost);
 router.get("/del/:id", postController.deletePost);
 router.post("/updates",postController.updatePost);
