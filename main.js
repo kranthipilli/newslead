@@ -22,6 +22,6 @@ app.use('/user',router)
 app.use("/auth",router)
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("server is connected");
 });
