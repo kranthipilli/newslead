@@ -2,10 +2,10 @@
 <html lang="en">
   <%- include("header") %>
   <body>
-    <div class="navigation"><%- include("nav") %></div>
-    <div class="container" style="display:flex;">
+    <div class="navigation" style="display: flex; justify-content: center; margin: 10px; color: rgb(227, 129, 0);" ><%- include("nav") %></div>
+    <div class="container" style="display:flex; margin-top: 50px;">
       <% data.forEach((Post)=>{ %>
-      <div class="card" style="margin: 10px; width: 50%">
+      <div class="card" style="margin: 10px; width: 50%;">
         <div class="card-body">
           <h5 class="card-title"><%= Post.title %></h5>
           <p class="card-text"><%= Post.body %></p>
